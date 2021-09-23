@@ -6,16 +6,22 @@ require_once 'QuackBehavior.php';
 abstract class Duck
 {
 
-    private FlyBehavior $flyBehavior;  // Duck has a FlyBehavior >>> Has A relationship
-    private QuackBehavior $quackBehavior; // Duck has a QuackBehavior >>> Has A relationship
+    protected FlyBehavior $flyBehavior;  // Duck has a FlyBehavior >>> Has A relationship
+    protected QuackBehavior $quackBehavior; // Duck has a QuackBehavior >>> Has A relationship
 
-
-    // setter for FlyBehavior and QuackBehavior
+    // setter for FlyBehavior
     public function setFlyBehavior(FlyBehavior $fly)
     {
         $this->flyBehavior = $fly;
     }
 
+    // fly 
+    public function performFly()
+    {
+        return $this->flyBehavior->fly();
+    }
+
+    // setter for QuackBehavior
     public function setQuackBehavior(Quack $quack)
     {
         $this->quackBehavior = $quack;
@@ -25,12 +31,6 @@ abstract class Duck
     public function performQuack()
     {
         return $this->quackBehavior->quack();
-    }
-
-    // fly 
-    public function performFly()
-    {
-        return $this->flyBehavior->fly();
     }
 
     // swim 

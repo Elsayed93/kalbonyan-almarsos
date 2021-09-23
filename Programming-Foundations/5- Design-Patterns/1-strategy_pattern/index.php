@@ -27,8 +27,13 @@ var_dump($decoyDuck->performFly());
 echo '<hr>';
 
 $mullarDuck = new MallerDuck;
-$mullarDuck->setFlyBehavior($canFly);
+// $mullarDuck->setFlyBehavior($canNotFly);
 var_dump($mullarDuck);
 echo '<hr>';
 
 var_dump($mullarDuck->performFly());
+var_dump($mullarDuck->performQuack());
+
+// $decoyDuck = new Decoy;
+// $decoyDuck->setFly('I can not fly');
+// var_dump($decoyDuck->getFly());
