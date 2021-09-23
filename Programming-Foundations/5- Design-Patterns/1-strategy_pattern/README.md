@@ -1,1 +1,1 @@
-![strategy-pattern](SP.jpg)
+![strategy-pattern](SP2.jpg)
