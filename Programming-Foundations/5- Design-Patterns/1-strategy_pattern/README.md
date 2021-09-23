@@ -1,1 +1,1 @@
-![Image of Yaktocat](https://www.tutorialspoint.com/design_pattern/images/strategy_pattern_uml_diagram.jpg)
+![strategy-pattern](SP.jpg)
