@@ -1,5 +1,0 @@
-value = input('Enter a number: ')
-print(value + ' is my favorite number')
-value_int = int(value)
-print('by multiplying the number by 10 you will get:')
-print(value_int * 10)
