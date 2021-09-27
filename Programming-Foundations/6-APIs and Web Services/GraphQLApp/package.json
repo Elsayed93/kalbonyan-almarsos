@@ -1,0 +1,16 @@
+{
+  "name": "graphqlapp",
+  "version": "1.0.0",
+  "description": "Test App for Testing GraphQL ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Elsayed Elbeshry",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.6.0"
+  }
+}
