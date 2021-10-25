@@ -8,12 +8,29 @@ https://coolors.co/f7fff7-343434-2f3061-ffe66d-a1c6d7
 #A1C6D7 - blue light
 */
 
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif;
+*/
 /* Global styles
 ------------------------------------*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 body {
   color: #343434;
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
 }
 
 img {
@@ -28,11 +45,52 @@ a:hover {
   text-decoration: none;
 }
 
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h1,
+h2 {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  line-height: 1.25;
+}
+
 .content-wrap {
   margin: 0 auto;
-  width: 900px;
+  max-width: 900px;
+  width: 85%;
   /* text-align: center; */
   padding: 60px 0;
+}
+
+h3 {
+  margin-bottom: 5px;
+}
+
+h3 + h4 {
+  margin-top: 0;
+}
+/* .experience-edu-sections h3 + p {
+  font-style: italic;
+} */
+
+.experience-edu-sections h3 ~ p {
+  margin: 0;
+}
+
+.seperator > section {
+  border-bottom: 1px dashed #343434;
+  margin-bottom: 20px;
+  padding: 20px 0;
+}
+
+.seperator > section:last-of-type {
+  border-style: none;
 }
 
 /* Profile
@@ -40,6 +98,7 @@ a:hover {
 header {
   background: #2f3061;
   color: #f7fff7;
+  text-align: center;
 }
 
 /* Projects
@@ -67,18 +126,96 @@ header {
   background: rgba(47, 48, 97, 80%);
 }
 
+.project-item {
+  overflow: auto;
+}
+
+.project-item h3 {
+  margin-top: 0;
+}
+
+.project-item img {
+  float: left;
+  margin-right: 30px;
+}
+
 /* Work Experience
   ------------------------------------*/
 .work-experience {
   background: #a1c6d7;
 }
 
+.job-item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 20px;
+}
+
 /* Education
   ------------------------------------*/
+.education {
+  background-image: url("../images/joanna-kosinska-unsplash.jpg");
+  background-position: top right;
+  background-size: cover;
+  padding-bottom: 100px;
+}
 
+.education p {
+  width: 60%;
+}
 /* Contact Info
   ------------------------------------*/
 footer {
   background: #343434;
   color: #f7fff7;
+  text-align: center;
+}
+
+.contact-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-list a {
+  padding: 20px;
+  display: inline-block;
+}
+
+/* Responsive
+  ------------------------------------*/
+@media screen and (max-width: 730px) {
+  .project-item img {
+    float: none;
+  }
+
+  .project-item h3 {
+    margin-top: 25px;
+    margin-bottom: 0;
+  }
+
+  .project-item p {
+    margin-top: 0;
+  }
+
+  .job-item {
+    display: block;
+  }
+
+  .contact-list {
+    display: block;
+  }
+
+  .contact-list a {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 55px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
 }
